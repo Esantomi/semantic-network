@@ -27,6 +27,6 @@ h2 {
 
 #mynetwork {
     width: 100%;
-    height: 88vh;
+    height: 100vh;  /* fill the whole frame (was 88vh, which left an empty strip at the bottom) */
     /* border: 1px solid lightgray; */
 }

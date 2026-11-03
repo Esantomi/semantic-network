@@ -24,7 +24,16 @@
     <script src="js/graph.js"></script>
     <script type="text/javascript">
       var network = new vis.Network(container, data, options);
-      network.fit();
+
+      // Fit the whole graph once the layout has settled and the node images have loaded
+      // (fitting earlier cut off nodes at the edges), with a little room for the labels.
+      function fitAll() {
+        network.fit({ animation: false });
+        network.moveTo({ scale: network.getScale() * 0.9 });
+      }
+      network.once('stabilizationIterationsDone', fitAll);
+      window.addEventListener('load', fitAll);
+      window.addEventListener('resize', fitAll);
 
       network.on('doubleClick', function(paramObject){
         window.open(nodes.get(paramObject.nodes[0]).link);
