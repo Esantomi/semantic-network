@@ -66,6 +66,20 @@ var nodes = new vis.DataSet([
       size: "50",
       link: '#'
     },
+    { 
+      id: "doldol",
+      label: "Doldol",
+      font: {
+        size: 20,
+        face: 'Rock Salt',
+      },
+      title: htmlTitle("제가 키우는 햄스터, 돌돌이입니다."),
+      shape: "image",
+      image: DIR + "doldol.png",
+      imagePadding: -15,
+      size: "50",
+      link: '#'
+    },
     // { 
     //   id: "webResource",
     //   label: "Web Resource",
@@ -161,6 +175,7 @@ var edges = new vis.DataSet([
     { from: 'family', to: 'me', label: "foaf:member", arrows: "to" },
     { from: 'family', to: 'wife', label: "foaf:member", arrows: "to" },
     { from: 'family', to: 'kokam', label: "foaf:member", arrows: "to" },
+    { from: 'family', to: 'doldol', label: "foaf:member", arrows: "to" },
     { from: 'me', to: 'webResource', label: "dcterms:creator", arrows: "to" },
     { from: 'git', to: 'webResource', label: "foaf:page", arrows: "to" },
     { from: 'cv', to: 'me', label: "dcterms:description", arrows: "to" },
