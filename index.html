@@ -29,7 +29,7 @@
       // (fitting earlier cut off nodes at the edges), with a little room for the labels.
       function fitAll() {
         network.fit({ animation: false });
-        network.moveTo({ scale: network.getScale() * 0.9 });
+        network.moveTo({ scale: network.getScale() * 1.0 });
       }
       network.once('stabilizationIterationsDone', fitAll);
       window.addEventListener('load', fitAll);
